@@ -1,0 +1,103 @@
+@font-face {
+  font-family: vodafone;
+  src: url("../fonts/Vodafone\ Light.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: vodafone;
+  background-color: #e00201;
+}
+
+/* Sign up form */
+.sign-up-form {
+  width: 280px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Vodafone Icon */
+img {
+  width: 70px;
+}
+
+/* first 4 input boxes */
+.input-box {
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px 0;
+  margin: 7px 0;
+  border: 1px solid #999;
+  box-shadow: 0 0 5px 0 rgba(63, 63, 63, 0.3);
+  width: 100%;
+  box-sizing: border-box; /* to ensure the width is within the container*/
+}
+
+.input-box:hover {
+  border: 1px solid black;
+}
+
+.select {
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 0;
+  margin: 7px 0;
+  border: 1px solid #999;
+  cursor: pointer;
+  box-shadow: 0 0 5px 0 rgba(63, 63, 63, 0.3);
+
+  /* Replace default styling (the arrow) */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points="0,0 100,0 50,50" style="fill:%23666666;"/></svg>');
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+}
+
+/* Dropdown list */
+.select:hover {
+  border: 1px solid black;
+}
+.select option {
+  background-color: white;
+}
+
+/* Terms and condition checkbox */
+.checkbox {
+  cursor: pointer;
+}
+
+/* Sign up button */
+.sign-up-button {
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #e00201;
+  background-color: #e00201;
+  padding: 10px 0;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 0 10px 0 rgba(63, 63, 63, 0.3);
+}
+
+/* Line between sign up and sign in */
+hr {
+  margin-top: 20px;
+  width: 80%;
+}
+
+@media (min-width: 400px) {
+  .sign-up-form {
+    width: 380px;
+  }
+}
