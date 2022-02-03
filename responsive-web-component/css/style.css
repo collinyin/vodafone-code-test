@@ -26,6 +26,11 @@ img {
   width: 70px;
 }
 
+/* Error message */
+.error {
+  color: red;
+}
+
 /* first 4 input boxes */
 .input-box {
   /* text-align: center; */

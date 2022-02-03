@@ -5,32 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up page</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script defer src="../js/sign-up-error.js"></script>
   </head>
   <body>
     <div class="sign-up-form">
       <img src="../images/vodafone-icon.png" alt="vodafone logo" />
       <h1>Sign up to Vodafone</h1>
-      <form>
+      <div class="error"></div>
+      <div class="error"></div>
+      <form method="GET">
         <input
+          id="email"
           type="email"
           class="input-box"
           placeholder="Enter your email address"
         />
-        <input type="password" class="input-box" placeholder="Enter password" />
         <input
+          id="password"
+          type="password"
+          class="input-box"
+          placeholder="Enter password"
+        />
+        <input
+          id="retyped-password"
           type="password"
           class="input-box"
           placeholder="Re-type password"
         />
         <input
-          type="fullname"
+          id="fullname"
+          type="text"
           class="input-box"
           placeholder="Enter your full name"
         />
         <select class="select">
           <option disabled selected>Select your age</option>
           <option value="15-24">15-24 years</option>
-          <option value="25-44">25-64 years</option>
+          <option value="25-44">25-44 years</option>
           <option value="45-64">45-64 years</option>
           <option value="65+">65 years and over</option>
         </select>
@@ -38,7 +49,7 @@
           <span><input type="checkbox" class="checkbox" /></span>
           I agree to the <a href="#">terms and conditions</a>
         </p>
-        <button type="button" class="sign-up-button">Sign Up</button>
+        <button type="submit" class="sign-up-button">Sign Up</button>
         <hr />
         <p>
           Do you already have an account? <a href="sign-in.html">Sign In</a>
