@@ -4,11 +4,12 @@ const form = document.getElementsByClassName("sign-up-form")[0];
 const emailError = document.getElementById("email-error");
 const passwordError = document.getElementById("password-error");
 
-/* 
-    'mockDB' is a mock data base in the form of a map where the key is the email
-    and the value is a hashed password (for this example we will use the actual 
-    password which is definitely not a good practice in the real world)
-*/
+/**
+ * 'mockDB' is a mock data base in the form of a map where the key is the email
+ * and the value is a hashed password (for this example we will use the actual
+ * password which is definitely not a good practice in the real world)
+ */
+
 const mockDB = new Map();
 mockDB.set("test@test.com", "123456789"); // to test the log in functionality
 

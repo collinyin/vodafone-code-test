@@ -7,16 +7,18 @@ var specialFlag = false;
 var upperFlag = false;
 var numFlag = false;
 
-/* PASSWORD STRENGTH DETECTOR
-    - A strong password contains:
-        - at least 1 capital letter
-        - at least 1 number
-        - at least 1 upper case letter
-    - A moderate password contains 2 of the 3 above and a weak password only contains 1 above.
-    - The length of the password also determines it's strength, if the password has 4 or less 
-    characters, it is considered a weak password even if it satisfies all 3 of the conditions above.
-    - A moderate password contains between 5-8 characters and a strong password contains 9+ characters.
+/**
+ * PASSWORD STRENGTH DETECTOR
+ * - A strong password contains:
+ *    - at least 1 capital letter
+ *    - at least 1 number
+ *    - at least 1 upper case letter
+ * - A moderate password contains 2 of the 3 above and a weak password only contains 1 above.
+ * - The length of the password also determines it's strength, if the password has 4 or less
+ *    characters, it is considered a weak password even if it satisfies all 3 of the conditions above.
+ * - A moderate password contains between 5-8 characters and a strong password contains 9+ characters.
  */
+
 password.addEventListener("input", () => {
   if (password.value.length > 0) {
     passwordStrength.style.display = "block";
@@ -24,14 +26,15 @@ password.addEventListener("input", () => {
     passwordStrength.style.display = "none";
   }
 
-  /* Tests whether there exists a special char, upper case letter or number; 
-        if any exist in the password it will increment the counter. However 
-        if it gets deleted, the counter will decrement. 
-        
-        Note: Special char can only increment the counter by at most 1, this
-              means that if there are 5 special characters the counter is only 
-              incremented by 1. Likewise for upper case letters and numbers.
-  */
+  /**
+   * Tests whether there exists a special char, upper case letter or number; if any exist in the password
+   *    it will increment the counter. However if it gets deleted, the counter will decrement.
+   *
+   * Note: Special char can only increment the counter by at most 1, this means that if there are 5
+   *        special characters the counter is only incremented by 1. Likewise for upper case letters
+   *        and numbers.
+   */
+
   if (specialChars.test(password.value) && !specialFlag) {
     specialFlag = true;
     strengthCounter++;
@@ -58,7 +61,9 @@ password.addEventListener("input", () => {
   console.log(strengthCounter);
   console.log(password.value);
 
-  /* Checks the strength of the password by length and the number of conditions passed*/
+  /**
+   * Checks the strength of the password by length and the number of conditions passed
+   */
   if (password.value.length <= 4 || strengthCounter <= 1) {
     strength.innerHTML = "Weak";
     strength.style.color = "red";
@@ -75,7 +80,9 @@ password.addEventListener("input", () => {
   }
 });
 
-/* Error handling of the sign up form */
+/**
+ * Error handling of the sign up form
+ */
 const form = document.getElementsByClassName("sign-up-form")[0];
 const errorElement = document.getElementsByClassName("error");
 const errorHead = errorElement[0];
@@ -86,9 +93,10 @@ const fullname = document.getElementById("fullname");
 const selectionBox = document.getElementsByClassName("select")[0];
 const checkBox = document.getElementsByClassName("checkbox")[0];
 const button = document.getElementsByClassName("sign-up-button")[0];
-/* There will be many more if statements in the real world but for 
+/**
+ * There will be many more if statements in the real world but for 
     demonstration purposes I've only provided a few basic ones below.
-*/
+ */
 form.addEventListener("submit", (e) => {
   let messages = [];
   if (email.value === "" || email == null) {
