@@ -14,32 +14,40 @@
       <div class="error"></div>
       <div class="error"></div>
       <form method="GET">
+        <p class="sign-in-text">Email Address</p>
         <input
           id="email"
           type="email"
           class="input-box"
-          placeholder="Enter your email address"
+          placeholder="e.g. vodafone@example.com"
         />
+        <p class="sign-in-text">Password</p>
         <input
           id="password"
           type="password"
           class="input-box"
-          placeholder="Enter password"
+          placeholder="•••••••••"
         />
+        <p id="password-strength">
+          Password strength: <span id="strength"></span>
+        </p>
+        <p class="sign-in-text">Confirm Password</p>
         <input
           id="retyped-password"
           type="password"
           class="input-box"
-          placeholder="Re-type password"
+          placeholder="•••••••••"
         />
+        <p class="sign-in-text">Full Name</p>
         <input
           id="fullname"
           type="text"
           class="input-box"
-          placeholder="Enter your full name"
+          placeholder="e.g. John Smith"
         />
+        <p class="sign-in-text">Age Range</p>
         <select class="select">
-          <option disabled selected>Select your age</option>
+          <option disabled selected>Select your age range</option>
           <option value="15-24">15-24 years</option>
           <option value="25-44">25-44 years</option>
           <option value="45-64">45-64 years</option>

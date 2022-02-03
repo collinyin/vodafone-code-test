@@ -63,6 +63,15 @@ img {
   background-size: 10px;
 }
 
+/* Password Strength*/
+#password-strength {
+  display: none;
+  padding: 0 15px;
+  margin: 0%;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
 /* Dropdown list */
 .select:hover {
   border: 1px solid black;
@@ -98,7 +107,7 @@ hr {
   width: 80%;
 }
 
-/* SIGN IN PAGE */
+/* LOG IN PAGE */
 /* Text on top of username and password box */
 .sign-in-text {
   text-align: left;
@@ -106,7 +115,15 @@ hr {
   font-weight: bold;
 }
 
-/* Sign in button */
+#email-error {
+  color: red;
+}
+
+#password-error {
+  color: red;
+}
+
+/* Log in button */
 .log-in-button {
   margin: 7% 0% 0%;
 }
