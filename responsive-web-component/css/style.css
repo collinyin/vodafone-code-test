@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: vodafone;
-  background-color: #e00201;
+  background-color: #b60606;
 }
 
 /* Sign up form */
@@ -15,7 +15,7 @@ body {
   width: 280px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   margin: 8% auto 8%; /* For demonstration purposes, to put in middle of screen */
   text-align: center;
   border-radius: 10px;
@@ -28,9 +28,9 @@ img {
 
 /* first 4 input boxes */
 .input-box {
-  text-align: center;
-  border-radius: 20px;
-  padding: 10px 0;
+  /* text-align: center; */
+  border-radius: 10px;
+  padding: 10px 15px;
   margin: 7px 0;
   border: 1px solid #999;
   box-shadow: 0 0 5px 0 rgba(63, 63, 63, 0.3);
@@ -38,15 +38,11 @@ img {
   box-sizing: border-box; /* to ensure the width is within the container*/
 }
 
-.input-box:hover {
-  border: 1px solid black;
-}
-
 .select {
   text-align: center;
   width: 100%;
-  border-radius: 20px;
-  padding: 10px 0;
+  border-radius: 10px;
+  padding: 10px;
   margin: 7px 0;
   border: 1px solid #999;
   cursor: pointer;
@@ -75,25 +71,39 @@ img {
   cursor: pointer;
 }
 
-/* Sign up button */
+/* Sign up and Log in button */
+.log-in-button,
 .sign-up-button {
   text-align: center;
   width: 100%;
-  border-radius: 20px;
-  border: 1px solid #e00201;
-  background-color: #e00201;
+  border-radius: 10px;
+  border: 1px solid #b60606;
+  background-color: #b60606;
   padding: 10px 0;
   cursor: pointer;
   color: white;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
   box-shadow: 0 0 10px 0 rgba(63, 63, 63, 0.3);
 }
 
-/* Line between sign up and sign in */
+/* Line between sign up and log in */
 hr {
   margin-top: 20px;
   width: 80%;
+}
+
+/* SIGN IN PAGE */
+/* Text on top of username and password box */
+.sign-in-text {
+  text-align: left;
+  margin: 5% 0% 0% 1%;
+  font-weight: bold;
+}
+
+/* Sign in button */
+.log-in-button {
+  margin: 7% 0% 0%;
 }
 
 @media (min-width: 400px) {
