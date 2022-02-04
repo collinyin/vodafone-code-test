@@ -13,13 +13,24 @@ heroBanner.style.display = "none";
  * b. Re-layout feature list items as per requested on desktop view ONLY;
  *      - Make features (with icons) display as 2x2 instead of 1x4 on DESKTOP view only
  */
+const nbnPlansGrid = document.getElementsByClassName("gklqxQ")[0];
 if (window.matchMedia("screen and (min-width:768px)").matches) {
-  const nbnPlansGrid = document.getElementsByClassName("gklqxQ")[0];
   nbnPlansGrid.style.gridTemplateColumns = "repeat(2, minmax(100px, 225px))";
 } else {
-  const nbnPlansGrid = document.getElementsByClassName("gklqxQ")[0];
-  nbnPlansGrid.style.gridTemplateColumns = "repeat(4, minmax(100px, 225px))";
+  nbnPlansGrid.style.gridTemplateColumns = "none";
 }
+window.addEventListener(
+  "resize",
+  function (event) {
+    if (window.matchMedia("screen and (min-width:768px)").matches) {
+      nbnPlansGrid.style.gridTemplateColumns =
+        "repeat(2, minmax(100px, 225px))";
+    } else {
+      nbnPlansGrid.style.gridTemplateColumns = "none";
+    }
+  },
+  true
+);
 
 /**
  * c. Automatically check address “Level 9 177 Pacific Highway, NORTH SYDNEY NSW 2060“ that
